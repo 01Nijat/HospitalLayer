@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital", "Hospital\Hospital.csproj", "{256CF135-BAAF-43D8-88F1-8363DB202B4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{89CEC4D1-D7A2-42C7-80B2-82B9C09A68B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{2ACA1E4F-DF4C-45B5-977E-2F6E831990FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{256CF135-BAAF-43D8-88F1-8363DB202B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{256CF135-BAAF-43D8-88F1-8363DB202B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{256CF135-BAAF-43D8-88F1-8363DB202B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{256CF135-BAAF-43D8-88F1-8363DB202B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89CEC4D1-D7A2-42C7-80B2-82B9C09A68B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89CEC4D1-D7A2-42C7-80B2-82B9C09A68B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89CEC4D1-D7A2-42C7-80B2-82B9C09A68B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89CEC4D1-D7A2-42C7-80B2-82B9C09A68B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ACA1E4F-DF4C-45B5-977E-2F6E831990FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ACA1E4F-DF4C-45B5-977E-2F6E831990FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ACA1E4F-DF4C-45B5-977E-2F6E831990FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ACA1E4F-DF4C-45B5-977E-2F6E831990FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {842EEA40-7358-4F32-B52F-5D4E9C3148B8}
+	EndGlobalSection
+EndGlobal

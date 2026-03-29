@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "FMzKHv3dd2emZK2XfihNRcR2IqtshX48Yj3443a+PPSRZi6UYS/yJLcL2G+zZgcdg7IEgfBEOBkazR6XX9JYwA==",
+  "success": true,
+  "projectFilePath": "/home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Entities/Entities.csproj",
+  "expectedPackageFiles": [
+    "/home/dev/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "/home/dev/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
+  ],
+  "logs": []
+}
