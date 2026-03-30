@@ -4,16 +4,16 @@ using System.Data;
 using Utilies.Helper;
 
 Helper.TextColor(ConsoleColor.Cyan, "Welcome");
-Helper.TextColor(ConsoleColor.Green, "please correct opnion: 1-Create, 2-DepartamenUpdate, 3-DeleteDepartament, 4-GetDepartamentwithName, 5-GetDepartamentWithId, 6-GetAllDe,7-GetAllEmplooye");
+ShowMenu();
 while(true)
 {
-string selectItem=Console.ReadLine();
-int menu;
-bool isTrue=int.TryParse(selectItem, out menu);
+ string selectItem=Console.ReadLine();
+ int menu;
+ bool isTrue=int.TryParse(selectItem, out menu);
   if(isTrue&&menu>=1 && isTrue && menu <= 7)
   { 
     switch (menu)
-    {
+     {
         case 1 :
        Console.WriteLine("hello");
         break;
@@ -32,6 +32,11 @@ bool isTrue=int.TryParse(selectItem, out menu);
         case 7 :
         Console.WriteLine("heldlo");
         break;
-    }
-  }
+     }
+   }
+}
+static void ShowMenu()
+{
+    Helper.TextColor(ConsoleColor.Green, "please correct opnion: 1-Create, 2-DepartamenUpdate, 3-DeleteDepartament, 4-GetDepartamentwithName, 5-GetDepartamentWithId, 6-GetAllDe,7-GetAllEmplooye");
+
 }
