@@ -7,6 +7,7 @@
 /home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/obj/Debug/net8.0/Hospital.AssemblyInfoInputs.cache
 /home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/obj/Debug/net8.0/Hospital.AssemblyInfo.cs
 /home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/obj/Debug/net8.0/Hospital.csproj.CoreCompileInputs.cache
+/home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/obj/Debug/net8.0/Hospital.sourcelink.json
 /home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/obj/Debug/net8.0/Hospital.dll
 /home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/obj/Debug/net8.0/refint/Hospital.dll
 /home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/obj/Debug/net8.0/Hospital.pdb
