@@ -13,3 +13,7 @@
 /home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/obj/Debug/net8.0/Hospital.pdb
 /home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/obj/Debug/net8.0/Hospital.genruntimeconfig.cache
 /home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/obj/Debug/net8.0/ref/Hospital.dll
+/home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/bin/Debug/net8.0/Utilies.dll
+/home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/bin/Debug/net8.0/Utilies.pdb
+/home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/obj/Debug/net8.0/Hospital.csproj.AssemblyReference.cache
+/home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/obj/Debug/net8.0/Hospital.csproj.CopyComplete

@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "Hospital/1.0.0": {
+        "dependencies": {
+          "Utilies": "1.0.0"
+        },
         "runtime": {
           "Hospital.dll": {}
+        }
+      },
+      "Utilies/1.0.0": {
+        "runtime": {
+          "Utilies.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Hospital/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Utilies/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
