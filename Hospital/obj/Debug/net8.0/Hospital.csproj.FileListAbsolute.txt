@@ -17,3 +17,9 @@
 /home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/bin/Debug/net8.0/Utilies.pdb
 /home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/obj/Debug/net8.0/Hospital.csproj.AssemblyReference.cache
 /home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/obj/Debug/net8.0/Hospital.csproj.CopyComplete
+/home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/bin/Debug/net8.0/BusinessLogic.dll
+/home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/bin/Debug/net8.0/DataAccess.dll
+/home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/bin/Debug/net8.0/Entities.dll
+/home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/bin/Debug/net8.0/BusinessLogic.pdb
+/home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/bin/Debug/net8.0/DataAccess.pdb
+/home/dev/Downloads/Hospital-Layer-Repository-Pattern--main/Hospital/bin/Debug/net8.0/Entities.pdb

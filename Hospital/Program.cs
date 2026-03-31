@@ -1,7 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using System.Data;
+using Hospital.Controller;
 using Utilies.Helper;
+DepartamentController departamentController=new DepartamentController();
 
 Helper.TextColor(ConsoleColor.Cyan, "Welcome");
 ShowMenu();
@@ -14,9 +16,9 @@ while(true)
   { 
     switch (menu)
      {
-        case 1 :
-       Console.WriteLine("hello");
-        break;
+        case (int)Menu.Create:
+           departamentController.Create();
+           break;
         case 2 :
         Console.WriteLine("hello3");
         break;
