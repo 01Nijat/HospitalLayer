@@ -23,7 +23,7 @@ public class DepartamentController
         if (isTrue)
         {
           Departament departament=new Departament{Name=name, MaxEmployees=maxEmplooye};
-            if (departamentService.Create != null)
+            if (departamentService.Create(departament)!= null)
             {
                 Helper.TextColor(ConsoleColor.DarkCyan, $"{departament.Name} Departament is Created");
                 return;
@@ -41,5 +41,26 @@ public class DepartamentController
              goto EnterName;
         }
 
+    }
+  public void GetAll()
+    {
+        
+        Helper.TextColor(ConsoleColor.Cyan, "Departament All");
+        var list=departamentService.GetAll();
+        if (list == null)
+        {
+            Helper.TextColor(ConsoleColor.Red, "Nulldir");
+            return;
+        }
+        if (list.Count == 0)
+        {
+            Helper.TextColor(ConsoleColor.Red, "Bosdu");
+            return;
+        }
+         foreach(Departament departament in departamentService.GetAll())
+        {
+            Helper.TextColor(ConsoleColor.Cyan, $"{departament.Id} {departament.Name}");
+        }           
+    
     }
 }

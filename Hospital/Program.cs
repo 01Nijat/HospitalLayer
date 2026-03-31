@@ -29,7 +29,8 @@ while(true)
         break;
         case 5 :
         break;
-        case 6 :
+        case (int)Menu.GetAll:
+        departamentController.GetAll();
         break;
         case 7 :
         Console.WriteLine("heldlo");
