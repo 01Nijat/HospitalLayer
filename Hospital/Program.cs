@@ -22,8 +22,8 @@ while(true)
         case 2 :
         Console.WriteLine("hello3");
         break;
-        case 3 :
-        Console.WriteLine("hell4o");
+        case (int)Menu.Delete:
+        departamentController.Delete();
         break;
         case 4 :
         break;

@@ -63,5 +63,28 @@ public class DepartamentController
         }           
     
     }
+   public void Delete()
+    {
+        GetAll();
+        Helper.TextColor(ConsoleColor.Cyan, "Silmek Bir Id Secin");
+        string selectItem=Console.ReadLine();
+        int deleteNum;
+        bool isTrue=int.TryParse(selectItem, out deleteNum);
+        if (isTrue)
+        {
+            Departament departament=departamentService.Delete(deleteNum);
+            if (deleteNum != null)
+            {
+                Helper.TextColor(ConsoleColor.Cyan, $"{departament.Id} {departament.Name}");
+                return;
+            }
+            else
+            {
+                Helper.TextColor(ConsoleColor.Red,"departament not found");
+                return;
+            }
+        }
+
+    }
 
 }
