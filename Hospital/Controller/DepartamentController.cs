@@ -23,8 +23,8 @@ public class DepartamentController
         if (isTrue)
         {
           Departament departament=new Departament{Name=name, MaxEmployees=maxEmplooye};
-            if (departamentService.Create(departament)!= null)
-            {
+            if (departamentService.Create(departament)!= null) //burada (departament) obyektni gondermemisdim
+            {                                            //mtod code segmentde null deil deye true olur, ve obyekt yoxdu deye errorda yoxdu ele bilirik dbcontekste yazilir halbuki obyekt gondermirik sintak error yox logic sehfi var. gerek diqqetli olaq
                 Helper.TextColor(ConsoleColor.DarkCyan, $"{departament.Name} Departament is Created");
                 return;
             }
@@ -63,4 +63,5 @@ public class DepartamentController
         }           
     
     }
+
 }
