@@ -25,7 +25,8 @@ while(true)
         case (int)Menu.Delete:
         departamentController.Delete();
         break;
-        case 4 :
+        case (int)Menu.GetByName:
+        departamentController.GetByName();
         break;
         case 5 :
         break;

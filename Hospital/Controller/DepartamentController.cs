@@ -86,5 +86,22 @@ public class DepartamentController
         }
 
     }
+    public void GetByName()
+    {
+        GetAll();
+      
+        Helper.TextColor(ConsoleColor.Cyan, "Enter By Name");
+        string name=Console.ReadLine();
+        Departament departament=departamentService.Get(name);
+        if (departament != null)
+        {
+            Helper.TextColor(ConsoleColor.Cyan, $"{departament.Name}");
+            return;
+        }
+        else {
+            Helper.TextColor(ConsoleColor.Cyan, "Name is not find");
+            return;
+        }
 
+    }
 }
