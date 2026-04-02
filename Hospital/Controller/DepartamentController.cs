@@ -42,6 +42,38 @@ public class DepartamentController
         }
 
     }
+    public void Update()
+    {
+       GetAll();
+       Helper.TextColor(ConsoleColor.Cyan,"Deyisiklik etmek isdediyinizi secin");
+       string selectItem=Console.ReadLine();
+       int itemId;
+       bool isTrue=int.TryParse(selectItem, out itemId);
+        if (isTrue)
+        {
+            
+            Helper.TextColor(ConsoleColor.White, "AD GUNCELLE");
+            string nameU=Console.ReadLine();
+            Helper.TextColor(ConsoleColor.White, "MaxEmployee Guncelle" );
+            string maxEmplooyeU=Console.ReadLine();
+            int maxEmU;
+            bool trueEu=int.TryParse( maxEmplooyeU, out maxEmU);
+            if (trueEu)
+            {
+                Departament Depar=new Departament{Name=nameU, MaxEmployees=maxEmU};
+                Departament departament=departamentService.Update(itemId, Depar);
+                Helper.TextColor(ConsoleColor.Cyan, $"{departament.Name} ve {departament.MaxEmployees} - ugurla guncellendi");
+            }
+            else
+            {
+                Helper.TextColor(ConsoleColor.Red, "Tapilmadi");
+            }
+
+        }
+
+        
+
+    }
   public void GetAll()
     {
         
@@ -115,11 +147,32 @@ public class DepartamentController
         if (isTrue)
         {
             Departament departament=departamentService.Get(itemId);
-            Helper.TextColor(ConsoleColor.Green, $"{departament.Id}");
+            Helper.TextColor(ConsoleColor.Green, $"{departament.Id},{departament.Name},{departament.MaxEmployees}");
         }
         else
         {
             Helper.TextColor(ConsoleColor.Red, "id Is not Found");
+        }
+    }
+    public void GetAllEmplooye()
+    {
+        GetAll();
+        Helper.TextColor(ConsoleColor.Cyan,"Enter Maxsize");
+        string selectItem=Console.ReadLine();
+        int itemmax;
+        bool isTrue=int.TryParse(selectItem, out itemmax);
+        if (isTrue)
+        {
+            Helper.TextColor(ConsoleColor.Cyan,$"with max size {itemmax}");
+            foreach(Departament departament in departamentService.GetAll(itemmax))
+            {
+                Helper.TextColor(ConsoleColor.Cyan, $"{departament.Id} - {departament.Name} - {departament.MaxEmployees}");
+            }
+        }
+        else
+        {
+            Helper.TextColor(ConsoleColor.Red, "503 forbidden");
+            return;
         }
     }
 }

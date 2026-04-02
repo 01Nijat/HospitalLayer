@@ -19,8 +19,9 @@ while(true)
         case (int)Menu.Create:
            departamentController.Create();
            break;
-        case 2 :
-        Console.WriteLine("hello3");
+        case  (int)Menu.Update:
+        departamentController.Update();
+        
         break;
         case (int)Menu.Delete:
         departamentController.Delete();
@@ -34,8 +35,9 @@ while(true)
         case (int)Menu.GetAll:
         departamentController.GetAll();
         break;
-        case 7 :
-        Console.WriteLine("heldlo");
+        case (int)Menu.GetAllEmployee:
+        departamentController.GetAllEmplooye();
+        
         break;
      }
    }
