@@ -60,7 +60,7 @@ public class DepartamentController
             bool trueEu=int.TryParse( maxEmplooyeU, out maxEmU);
             if (trueEu)
             {
-                Departament Depar=new Departament{Name=nameU, MaxEmployees=maxEmU};
+                Departament Depar=new Departament{Id=itemId, Name=nameU, MaxEmployees=maxEmU};
                 Departament departament=departamentService.Update(itemId, Depar);
                 Helper.TextColor(ConsoleColor.Cyan, $"{departament.Name} ve {departament.MaxEmployees} - ugurla guncellendi");
             }
