@@ -104,4 +104,22 @@ public class DepartamentController
         }
 
     }
+    public void GetById()
+    {
+        GetAll();
+        Helper.TextColor(ConsoleColor.Cyan,"Id ni qeyd edin sistemde varsa gosterek.");
+        string selectItem=Console.ReadLine();
+        int itemId;
+        
+        bool isTrue=int.TryParse(selectItem, out itemId);
+        if (isTrue)
+        {
+            Departament departament=departamentService.Get(itemId);
+            Helper.TextColor(ConsoleColor.Green, $"{departament.Id}");
+        }
+        else
+        {
+            Helper.TextColor(ConsoleColor.Red, "id Is not Found");
+        }
+    }
 }

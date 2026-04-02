@@ -28,7 +28,8 @@ while(true)
         case (int)Menu.GetByName:
         departamentController.GetByName();
         break;
-        case 5 :
+        case (int)Menu.GetById:
+        departamentController.GetById();
         break;
         case (int)Menu.GetAll:
         departamentController.GetAll();
