@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 using BusinessLogic.Service;
 using Entities.Model;
 using Utilies.Helper;
@@ -24,12 +25,32 @@ public class DoctorsController
        Doctors newDct=doctorService.Create(doctors, departamentName);
         if (newDct != null)
         {
-             Helper.TextColor(ConsoleColor.Green, $"Student {newDct.Name} {newDct.Surname} created successfully in group {departamentName}");
+             Helper.TextColor(ConsoleColor.Green, $"Doctor {newDct.Name} {newDct.Surname} created successfully in Departament {departamentName}");
         
         }
         else
         {
-                            Helper.TextColor(ConsoleColor.Red, $"Failed to create doctor in departament {departamentName}. departament may not exist or is full.");
+          Helper.TextColor(ConsoleColor.Red, $"Failed to create doctor in departament {departamentName}. departament may not exist or is full.");
         }
     }
+    public void Delete()
+     
+    {
+       
+        Helper.TextColor(ConsoleColor.Cyan, "Zehmet olmasa Id secin silek");
+        string selectedId=Console.ReadLine();
+        int itemId;
+        bool isTrue=int.TryParse(selectedId, out itemId);
+        
+        if (isTrue != null)
+        {
+            Doctors doctors=doctorService.Delete(itemId);
+            Helper.TextColor(ConsoleColor.Cyan, $"{doctors.Id} - {doctors.Name}-silindi");
+        }
+        else
+        {
+            Helper.TextColor(ConsoleColor.Red, "Id not found");
+        }
+    }
+
 }

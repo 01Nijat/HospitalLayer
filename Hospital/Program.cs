@@ -12,7 +12,7 @@ while(true)
  string selectItem=Console.ReadLine();
  int menu;
  bool isTrue=int.TryParse(selectItem, out menu);
-  if(isTrue&&menu>=1 && isTrue && menu <= 8)
+  if(isTrue&&menu>=1 && isTrue && menu <= 9)
   { 
     switch (menu)
      {
@@ -40,6 +40,9 @@ while(true)
         break;
         case (int)Menu.CreateDoctor:
         doctorsController.Create();
+        break;
+        case (int)Menu.DeleteDoctor:
+        doctorsController.Delete();
         break;
      }
    }
