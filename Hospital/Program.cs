@@ -4,7 +4,7 @@ using System.Data;
 using Hospital.Controller;
 using Utilies.Helper;
 DepartamentController departamentController=new DepartamentController();
-
+DoctorsController doctorsController=new DoctorsController();
 Helper.TextColor(ConsoleColor.Cyan, "Welcome");
 ShowMenu();
 while(true)
@@ -12,7 +12,7 @@ while(true)
  string selectItem=Console.ReadLine();
  int menu;
  bool isTrue=int.TryParse(selectItem, out menu);
-  if(isTrue&&menu>=1 && isTrue && menu <= 7)
+  if(isTrue&&menu>=1 && isTrue && menu <= 8)
   { 
     switch (menu)
      {
@@ -36,8 +36,10 @@ while(true)
         departamentController.GetAll();
         break;
         case (int)Menu.GetAllEmployee:
-        departamentController.GetAllEmplooye();
-        
+        departamentController.GetAllEmplooye();       
+        break;
+        case (int)Menu.CreateDoctor:
+        doctorsController.Create();
         break;
      }
    }
