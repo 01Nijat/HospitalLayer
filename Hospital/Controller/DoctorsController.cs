@@ -52,5 +52,8 @@ public class DoctorsController
             Helper.TextColor(ConsoleColor.Red, "Id not found");
         }
     }
-
+    public void GetId()
+    {
+        
+    }
 }
