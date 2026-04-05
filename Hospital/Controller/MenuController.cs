@@ -45,4 +45,30 @@ public class MenuController
             }
         }
     }
+   public void DoctorMenu()
+    {
+        DoctorsController doctorsController=new DoctorsController();
+        while (true)
+        {
+            Helper.TextColor(ConsoleColor.White, "Doctor ucun bir secim edin");
+            Helper.TextColor(ConsoleColor.White, "please correct opnion: 1-Create, 2-Delete");
+            string secim=Console.ReadLine();
+            int menu;
+            bool isTrue=int.TryParse(secim, out menu);
+        if (isTrue)
+        {
+            switch (menu)
+     {
+        
+        case (int)Menu.CreateDoctor:
+        doctorsController.Create();
+        break;
+        case (int)Menu.DeleteDoctor:
+        doctorsController.Delete();
+        break;
+        default: Helper.TextColor(ConsoleColor.Red, "Yanlish secim"); break;
+     }
+        }
+        }
+    }
 }
