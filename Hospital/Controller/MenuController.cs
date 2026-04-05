@@ -71,6 +71,8 @@ public class MenuController
         doctorsController.GetId(); break;
          case (int)Menu.DoctorName:
         doctorsController.GetName(); break;
+        case (int)Menu.DoctorAll:
+        doctorsController.GetAll(); break;
         case 0: Helper.TextColor(ConsoleColor.Red,"Cixis edildi"); return;
         default: Helper.TextColor(ConsoleColor.Red, "Yanlish secim"); break;
      }

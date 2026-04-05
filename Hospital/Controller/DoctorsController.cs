@@ -90,4 +90,23 @@ public class DoctorsController
             Helper.TextColor(ConsoleColor.Red,"Not found");
         }
     }
+    public void GetAll()
+    {
+        Helper.TextColor(ConsoleColor.Cyan,"Butun Hekimler");
+        List<Doctors>doctors=doctorService.GetAll();
+        if (doctors == null)
+        {
+            Helper.TextColor(ConsoleColor.Red, "Nulldir");
+        }
+        if (doctors.Count==0)
+        {
+            Helper.TextColor(ConsoleColor.Red, "bosdur");
+        }
+        
+            foreach(Doctors doxdur in doctorService.GetAll())
+            {
+                Helper.TextColor(ConsoleColor.Cyan,$"{doxdur.Id}-{doxdur.Name}");
+            }
+        
+    }
 }
