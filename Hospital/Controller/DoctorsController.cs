@@ -73,4 +73,21 @@ public class DoctorsController
             Helper.TextColor(ConsoleColor.Red, "Not Found");
         }
     }
+    public void GetName()
+    {
+        Helper.TextColor(ConsoleColor.Cyan,"Bir Ad secin");
+        string name=Console.ReadLine();
+        List<Doctors> doctors=doctorService.Get(name);
+        if (doctors != null)
+        {
+            foreach(Doctors doctor in doctors)
+            {
+                Helper.TextColor(ConsoleColor.Yellow,$"{doctor.Id} - {doctor.Name}");
+            }
+        }
+        else
+        {
+            Helper.TextColor(ConsoleColor.Red,"Not found");
+        }
+    }
 }
