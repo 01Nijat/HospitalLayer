@@ -54,6 +54,23 @@ public class DoctorsController
     }
     public void GetId()
     {
+        Helper.TextColor(ConsoleColor.Cyan, "Please select Id");
+        string selectItem=Console.ReadLine();
+        int selectedId;
+        bool isTrue=int.TryParse(selectItem, out selectedId);
+        if (isTrue)
+        {
+          
+         Doctors doctors=doctorService.Get(selectedId);
+            if (doctors != null)
+            {
+                 Helper.TextColor(ConsoleColor.Cyan,$"{doctors.Id} {doctors.Departament.Name} {doctors.Name} {doctors.Surname}");
+            }
         
+        }
+        else
+        {
+            Helper.TextColor(ConsoleColor.Red, "Not Found");
+        }
     }
 }

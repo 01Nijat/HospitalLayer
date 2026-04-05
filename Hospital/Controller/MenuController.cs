@@ -67,6 +67,8 @@ public class MenuController
         case (int)Menu.DeleteDoctor:
         doctorsController.Delete();
         break;
+        case (int)Menu.DoctorId:
+        doctorsController.GetId(); break;
         case 0: Helper.TextColor(ConsoleColor.Red,"Cixis edildi"); return;
         default: Helper.TextColor(ConsoleColor.Red, "Yanlish secim"); break;
      }
