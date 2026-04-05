@@ -3,52 +3,25 @@
 using System.Data;
 using Hospital.Controller;
 using Utilies.Helper;
-DepartamentController departamentController=new DepartamentController();
-DoctorsController doctorsController=new DoctorsController();
+
 Helper.TextColor(ConsoleColor.Cyan, "Welcome");
-ShowMenu();
+MenuController menuController=new MenuController();
 while(true)
 {
+   Helper.TextColor(ConsoleColor.Green,"Select Opnion: 1-Departament Menu, 2-Doctor Menu");
  string selectItem=Console.ReadLine();
  int menu;
  bool isTrue=int.TryParse(selectItem, out menu);
-  if(isTrue&&menu>=1 && isTrue && menu <= 9)
-  { 
-    switch (menu)
-     {
-        case (int)Menu.Create:
-           departamentController.Create();
-           break;
-        case  (int)Menu.Update:
-        departamentController.Update();
-        
-        break;
-        case (int)Menu.Delete:
-        departamentController.Delete();
-        break;
-        case (int)Menu.GetByName:
-        departamentController.GetByName();
-        break;
-        case (int)Menu.GetById:
-        departamentController.GetById();
-        break;
-        case (int)Menu.GetAll:
-        departamentController.GetAll();
-        break;
-        case (int)Menu.GetAllEmployee:
-        departamentController.GetAllEmplooye();       
-        break;
-        case (int)Menu.CreateDoctor:
-        doctorsController.Create();
-        break;
-        case (int)Menu.DeleteDoctor:
-        doctorsController.Delete();
-        break;
-     }
+  if(isTrue)
+  {
+      switch (menu)
+      {
+         
+         case 1: menuController.DepartamentMenu();break;       
+         case 2: menuController.DoctorMenu(); break;
+         case 0: Helper.TextColor(ConsoleColor.Red,"Cixis edildi"); return;
+         default: Helper.TextColor(ConsoleColor.Red,"Bir secim edin"); break;
+         
+      }
    }
-}
-static void ShowMenu()
-{
-    Helper.TextColor(ConsoleColor.Green, "please correct opnion: 1-Create, 2-DepartamenUpdate, 3-DeleteDepartament, 4-GetDepartamentwithName, 5-GetDepartamentWithId, 6-GetAllDe,7-GetAllEmplooye");
-
 }
