@@ -40,6 +40,7 @@ public class MenuController
         case (int)Menu.GetAllEmployee:
         departamentController.GetAllEmplooye();       
         break;
+        case 0: Helper.TextColor(ConsoleColor.Red,"Cixis edildi"); return;
     default: Helper.TextColor(ConsoleColor.Red, "Yanlish secim"); break;
                 }
             }
@@ -66,6 +67,7 @@ public class MenuController
         case (int)Menu.DeleteDoctor:
         doctorsController.Delete();
         break;
+        case 0: Helper.TextColor(ConsoleColor.Red,"Cixis edildi"); return;
         default: Helper.TextColor(ConsoleColor.Red, "Yanlish secim"); break;
      }
         }
