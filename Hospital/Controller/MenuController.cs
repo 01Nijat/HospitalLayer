@@ -52,7 +52,7 @@ public class MenuController
         while (true)
         {
             Helper.TextColor(ConsoleColor.White, "Doctor ucun bir secim edin");
-            Helper.TextColor(ConsoleColor.White, "please correct opnion: 1-Create, 2-Delete, 3-DctorId, 4-DoctorName");
+            Helper.TextColor(ConsoleColor.White, "please correct opnion: 1-Create, 2-Delete, 3-DctorId, 4-DoctorName, 5-GetAll, 6-Get All Doc Dep, 7-Update");
             string secim=Console.ReadLine();
             int menu;
             bool isTrue=int.TryParse(secim, out menu);
@@ -73,6 +73,10 @@ public class MenuController
         doctorsController.GetName(); break;
         case (int)Menu.DoctorAll:
         doctorsController.GetAll(); break;
+        case(int)Menu.GetAllDoctorForDepartament: 
+        doctorsController.GetAllDoctorForDepartament(); break;
+         case(int)Menu.docUpdate: 
+        doctorsController.Update(); break;
         case 0: Helper.TextColor(ConsoleColor.Red,"Cixis edildi"); return;
         default: Helper.TextColor(ConsoleColor.Red, "Yanlish secim"); break;
      }

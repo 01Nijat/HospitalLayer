@@ -9,9 +9,11 @@ namespace Hospital.Controller;
 public class DoctorsController
 { 
     private DoctorService doctorService{get;}
+    private DepartamentService departamentService{get;}
     public DoctorsController()
     {
         doctorService=new DoctorService();
+        departamentService =new DepartamentService();
     }
   public void Create()
     {
@@ -108,5 +110,62 @@ public class DoctorsController
                 Helper.TextColor(ConsoleColor.Cyan,$"{doxdur.Id}-{doxdur.Name}");
             }
         
+    }
+    public void GetAllDoctorForDepartament()
+    {   while(true){
+        Helper.TextColor(ConsoleColor.Cyan,"Deprtament Adi yazin");
+        string depName=Console.ReadLine();
+        List<Doctors>doktur=doctorService.GetAll(depName);
+        if (depName != null)
+        {
+            foreach(Doctors doctors in doktur)
+            {
+                Helper.TextColor(ConsoleColor.Cyan, $"All Doctors {doctors.Name}, - {doctors.Departament.Name}");
+            }
+        }
+        if (doktur == null)
+        {
+            Helper.TextColor(ConsoleColor.Red, "Nulldir");
+        }
+        if (doktur.Count==0)
+        {
+            Helper.TextColor(ConsoleColor.Red, "bosdur");
+        }
+        else
+        {
+            Helper.TextColor(ConsoleColor.Red,"Xais edirik duzgun qeyd edin");
+        }
+    }
+    }
+
+public void Update()
+    {
+        Helper.TextColor(ConsoleColor.Yellow, "Doctors Update Etmek ucun ID secin");
+        string select=Console.ReadLine();
+        int itemId;
+        bool isTrue=int.TryParse(select,out itemId);
+        if (isTrue)
+        {
+            Doctors doctors=doctorService.Get(itemId);
+            if (doctors != null)
+            {
+                Helper.TextColor(ConsoleColor.Cyan,"Departamentler");
+                List<Departament> departaments = departamentService.GetAll();              
+                 foreach(var d in departaments)
+                {
+                    Helper.TextColor(ConsoleColor.Cyan,$"{d.Id} - {d.Name}");
+                }
+                Helper.TextColor(ConsoleColor.Cyan,"Yeni department adi girin");
+                string departamentName=Console.ReadLine().ToLower();
+              
+                doctorService.Update(doctors,departamentName);
+                Helper.TextColor(ConsoleColor.Cyan,$"Guncellendi : {doctors.Id} {doctors.Name}-{doctors.Surname} {doctors.Departament.Name}");
+            }
+            else
+            {
+                Helper.TextColor(ConsoleColor.Red,"Xeta Duzgun Qeyd Aparin");
+            }
+        }
+
     }
 }
